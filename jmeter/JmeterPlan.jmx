@@ -12,6 +12,31 @@
       <stringProp name="TestPlan.user_define_classpath"></stringProp>
     </TestPlan>
     <hashTree>
+      <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="Test Plan External Variables" enabled="true">
+        <collectionProp name="Arguments.arguments">
+          <elementProp name="SECONDS_TO_MAX_RPS" elementType="Argument">
+            <stringProp name="Argument.name">SECONDS_TO_MAX_RPS</stringProp>
+            <stringProp name="Argument.value">${__P(secondsToMaxRPS,10)}</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="MAX_RPS" elementType="Argument">
+            <stringProp name="Argument.name">MAX_RPS</stringProp>
+            <stringProp name="Argument.value">${__P(maxRPS,20)}</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="SECONDS_IN_MAX_RPS" elementType="Argument">
+            <stringProp name="Argument.name">SECONDS_IN_MAX_RPS</stringProp>
+            <stringProp name="Argument.value">${__P(secondsInMaxRPS,20)}</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="SECONDS_TO_FINISH" elementType="Argument">
+            <stringProp name="Argument.name">SECONDS_TO_FINISH</stringProp>
+            <stringProp name="Argument.value">${__P(secondsToFinish,20)}</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+        </collectionProp>
+      </Arguments>
+      <hashTree/>
       <com.blazemeter.jmeter.threads.concurrency.ConcurrencyThreadGroup guiclass="com.blazemeter.jmeter.threads.concurrency.ConcurrencyThreadGroupGui" testclass="com.blazemeter.jmeter.threads.concurrency.ConcurrencyThreadGroup" testname="bzm - Concurrency Thread Group" enabled="true">
         <elementProp name="ThreadGroup.main_controller" elementType="com.blazemeter.jmeter.control.VirtualUserController"/>
         <stringProp name="ThreadGroup.on_sample_error">stopthread</stringProp>
@@ -26,20 +51,20 @@
       <hashTree>
         <kg.apc.jmeter.timers.VariableThroughputTimer guiclass="kg.apc.jmeter.timers.VariableThroughputTimerGui" testclass="kg.apc.jmeter.timers.VariableThroughputTimer" testname="tst" enabled="true">
           <collectionProp name="load_profile">
-            <collectionProp name="-1618932252">
+            <collectionProp name="-1728688641">
               <stringProp name="49">1</stringProp>
-              <stringProp name="-1081152015">maxRPS</stringProp>
-              <stringProp name="-1658806293">secondsToMaxRPS</stringProp>
+              <stringProp name="-537889478">${MAX_RPS}</stringProp>
+              <stringProp name="-1924326256">${SECONDS_TO_MAX_RPS}</stringProp>
             </collectionProp>
-            <collectionProp name="808322961">
-              <stringProp name="-1081152015">maxRPS</stringProp>
-              <stringProp name="-1081152015">maxRPS</stringProp>
-              <stringProp name="-242387179">secondsInMaxRPS</stringProp>
+            <collectionProp name="-236884038">
+              <stringProp name="-537889478">${MAX_RPS}</stringProp>
+              <stringProp name="-537889478">${MAX_RPS}</stringProp>
+              <stringProp name="858783014">${SECONDS_IN_MAX_RPS}</stringProp>
             </collectionProp>
-            <collectionProp name="39470022">
-              <stringProp name="-1081152015">maxRPS</stringProp>
+            <collectionProp name="-54439146">
+              <stringProp name="-537889478">${MAX_RPS}</stringProp>
               <stringProp name="49">1</stringProp>
-              <stringProp name="-1852096883">secondsToFinish</stringProp>
+              <stringProp name="-97922179">${SECONDS_TO_FINISH}</stringProp>
             </collectionProp>
           </collectionProp>
         </kg.apc.jmeter.timers.VariableThroughputTimer>
