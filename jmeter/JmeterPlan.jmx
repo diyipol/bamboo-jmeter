@@ -26,20 +26,20 @@
       <hashTree>
         <kg.apc.jmeter.timers.VariableThroughputTimer guiclass="kg.apc.jmeter.timers.VariableThroughputTimerGui" testclass="kg.apc.jmeter.timers.VariableThroughputTimer" testname="tst" enabled="true">
           <collectionProp name="load_profile">
-            <collectionProp name="580950411">
+            <collectionProp name="-1618932252">
               <stringProp name="49">1</stringProp>
-              <stringProp name="-182518795">${maxRPS}</stringProp>
-              <stringProp name="1830081737">${secondsToMaxRPS}</stringProp>
+              <stringProp name="-1081152015">maxRPS</stringProp>
+              <stringProp name="-1658806293">secondsToMaxRPS</stringProp>
             </collectionProp>
-            <collectionProp name="-806129729">
-              <stringProp name="-182518795">${maxRPS}</stringProp>
-              <stringProp name="-182518795">${maxRPS}</stringProp>
-              <stringProp name="-1505565985">${secondsInMaxRPS}</stringProp>
+            <collectionProp name="808322961">
+              <stringProp name="-1081152015">maxRPS</stringProp>
+              <stringProp name="-1081152015">maxRPS</stringProp>
+              <stringProp name="-242387179">secondsInMaxRPS</stringProp>
             </collectionProp>
-            <collectionProp name="-301690614">
-              <stringProp name="-182518795">${maxRPS}</stringProp>
+            <collectionProp name="39470022">
+              <stringProp name="-1081152015">maxRPS</stringProp>
               <stringProp name="49">1</stringProp>
-              <stringProp name="133040743">${secondsToFinish}</stringProp>
+              <stringProp name="-1852096883">secondsToFinish</stringProp>
             </collectionProp>
           </collectionProp>
         </kg.apc.jmeter.timers.VariableThroughputTimer>
