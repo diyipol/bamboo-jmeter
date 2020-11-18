@@ -1,15 +1,16 @@
 import pandas as pd
 import sys
 
-if len(sys.argv) < 3:
-    print("Script has three args: jmeterResultFile, maxExecutionTimeAllowed and maxNumberSlowerExecutionsAllowed")
+if len(sys.argv) < 4:
+    print("Script has three args: jmeterResultFile, maxExecutionTimeAllowed, maxNumberSlowerExecutionsAllowed and maxNumberExecutionErrorsAllowed")
     sys.exit(-1)
 
 jmeterResultFile = sys.argv[1]
 maxExecutionTimeAllowed = int(sys.argv[2])
 maxNumberSlowerExecutionsAllowed = int(sys.argv[3])
+maxNumberExecutionErrorsAllowed = int(sys.argv[4])
 
-print("Verify jmeter tests result with jmeterResultFile [", 
+print("Verifying jmeter tests result with jmeterResultFile [", 
     jmeterResultFile, "], maxExecutionTimeAllowed [", maxExecutionTimeAllowed, 
     "] and maxNumberSlowerExecutionsAllowed [", maxNumberSlowerExecutionsAllowed, "]")
 
@@ -29,7 +30,7 @@ slowerExecutions = jmeterResult[jmeterResult["elapsed"] > maxExecutionTimeAllowe
 
 print("There are [", slowerExecutions, "] slower executions in jmeter result")
 
-if koExecutions > 0 or slowerExecutions > maxNumberSlowerExecutionsAllowed :
+if koExecutions > maxNumberExecutionErrorsAllowed or slowerExecutions > maxNumberSlowerExecutionsAllowed :
     sys.exit(-1)
 
 sys.exit(0)
